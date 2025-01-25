@@ -13,7 +13,7 @@ namespace DecoratorPattern.Classes
         {
         }
 
-        public void Notify() 
+        public override void Notify() 
         {
             base.Notify();
             Console.WriteLine("Notification from whatsapp");

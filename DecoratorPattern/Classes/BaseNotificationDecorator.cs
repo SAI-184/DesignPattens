@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace DecoratorPattern.Classes
 {
-    public class BaseNotificationDecorator : INotifier
+    public abstract class BaseNotificationDecorator : INotifier
     {
         private readonly INotifier notifier;
         public BaseNotificationDecorator(INotifier notifier)
         {
             this.notifier = notifier;
         }
-        public void Notify()
+        public virtual void Notify()
         {
             notifier.Notify();
         }
